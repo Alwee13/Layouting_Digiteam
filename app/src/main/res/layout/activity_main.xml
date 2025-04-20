@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="371dp"
+            android:layout_height="79dp"
+            android:layout_margin="20dp"
+            android:background="#E6F6EC"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/logo" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="81dp"
+                android:layout_marginEnd="97dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toEndOf="@+id/logo"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="233dp"
+                android:text="DigiTeam" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@+id/logo"
+                android:textSize="9sp"
+                android:textColor="#757575"
+                android:text="Digital Together Everyone Achieve More" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/logo"
+                android:text="Jabar Digital Service"
+                android:textColor="#757575"
+                android:textSize="9sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/profile"
+                android:layout_marginEnd="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skill"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            android:layout_margin="20dp"
+            >
+
+            <TextView
+                android:id="@+id/title_jam"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_jam"
+                />
+            <TextView
+                android:id="@+id/jam_kerja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jam_kerja"
+                android:layout_below="@+id/title_jam"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/blue"
+                />
+            <ImageView
+                android:id="@+id/time"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/time"
+                android:layout_below="@+id/jam_kerja"
+                />
+
+            <TextView
+                android:id="@+id/batas_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time"
+                android:text="@string/batas_kerja"
+                android:paddingTop="10dp"
+                android:textColor="@color/gray"
+                />
+            <ImageButton
+                android:id="@+id/chekin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/batas_kerja"
+                android:background="@drawable/btn1"
+                android:layout_marginTop="10dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/body"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            >
+            <TextView
+                android:id="@+id/laporan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/laporan"
+                />
+
+            <TextView
+                android:id="@+id/maret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/maret"
+                android:layout_below="@+id/laporan"
+                />
+
+            <TextView
+                android:id="@+id/april"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/laporan"
+                android:layout_alignParentEnd="true"
+                android:text="@string/april"
+                android:layout_marginEnd="150dp"
+                />
+
+            <ImageView
+                android:id="@+id/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/group1"
+                android:layout_below="@+id/maret"
+                />
+
+            <ImageView
+                android:id="@+id/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/april"
+                android:layout_marginEnd="-151dp"
+                android:layout_toStartOf="@+id/april"
+                android:background="@drawable/group3" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:layout_below="@+id/green"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/izin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/izin"
+            app:layout_constraintTop_toBottomOf="@+id/middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/kehadiran"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/text_izin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/izin"
+            app:layout_constraintTop_toBottomOf="@+id/izin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/kehadiran"
+            android:layout_marginTop="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/kehadiran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/user_friends"
+            app:layout_constraintTop_toBottomOf="@+id/middle"
+            app:layout_constraintStart_toEndOf="@+id/izin"
+            app:layout_constraintEnd_toStartOf="@+id/book"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/text_kehadiran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kehadiran"
+            app:layout_constraintStart_toEndOf="@+id/text_izin"
+            app:layout_constraintTop_toBottomOf="@+id/kehadiran"
+            app:layout_constraintEnd_toStartOf="@+id/book"
+            android:layout_marginTop="5dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book"
+            app:layout_constraintTop_toBottomOf="@+id/middle"
+            app:layout_constraintStart_toEndOf="@+id/kehadiran"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/text_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/report"
+            app:layout_constraintTop_toBottomOf="@+id/book"
+            app:layout_constraintStart_toEndOf="@id/text_kehadiran"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            />
+
+<!--        ======================-->
+
+        <ImageView
+            android:id="@+id/agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/calendar"
+            app:layout_constraintTop_toBottomOf="@+id/text_izin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/booking"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/text_agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agenda"
+            app:layout_constraintTop_toBottomOf="@+id/agenda"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/booking"
+            android:layout_marginTop="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book"
+            app:layout_constraintTop_toBottomOf="@+id/text_kehadiran"
+            app:layout_constraintStart_toEndOf="@+id/agenda"
+            app:layout_constraintEnd_toStartOf="@+id/wiki"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/text_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/booking"
+            app:layout_constraintStart_toEndOf="@id/agenda"
+            app:layout_constraintTop_toBottomOf="@id/booking"
+            app:layout_constraintEnd_toEndOf="@id/wiki"
+            android:layout_marginTop="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/wiki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vector"
+            app:layout_constraintTop_toBottomOf="@+id/text_izin"
+            app:layout_constraintStart_toEndOf="@+id/booking"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/text_wiki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wiki"
+            app:layout_constraintStart_toEndOf="@id/booking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wiki"
+            android:layout_marginTop="5dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
